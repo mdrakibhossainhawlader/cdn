@@ -22,7 +22,7 @@ $gg = preg_replace('/\s+/', ' ',$gg);
 $gg=str_replace('&title=', '&title=waphan.co+-+', $gg);
 $ggg=maling($gg, '<div class="d-info2">', '</dl>');
 
-$isatu=maling($ggg, '720', '480p');
+$isatu=maling($ggg, '720', '480p</span>');
 $satu=maling($isatu, '<a href="', '">');
 echo $satu;
 ?>
