@@ -24,5 +24,8 @@ $ggg=maling($gg, '<div class="d-info2">', '</dl>');
 
 $isatu=maling($ggg, '240p</span>', '144p</span>');
 $satu=maling($isatu, '<a href="', '" >');
-echo $satu;
+if(!empty($satu)){
+header('Location: '.$satu.'');}else{
+echo '<center>Sorry, there was a problem with this link<br/><a href="http://waphan.co">Back to Main</a></center>';
+}
 ?>
