@@ -24,5 +24,5 @@ $ggg=maling($gg, '<div class="d-info2">', '</dl>');
 
 $isatu=maling($ggg, '720', '480p');
 $satu=maling($isatu, '<a href="', '">');
-header('Location: '.$satu.'');
+echo $satu;
 ?>
