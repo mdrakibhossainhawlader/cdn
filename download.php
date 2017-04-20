@@ -23,35 +23,34 @@ $gg=str_replace('&title=', '&title=waphan.co+-+', $gg);
 $gg=str_replace('(Max 720p)', 'Max 720p', $gg);
 $gg=str_replace('<span class="spanWid"><img src="style/images/d_icon1.png" alt=""/> ', '', $gg);
 $ggg=maling($gg, '<div class="d-info2">', '</dl>');
-echo htmlspecialchars($ggg);
 
 if($_GET['type'] == '720p') {
 $isatu=maling($ggg, 'Full Video</dt>', '720p');
-$satu=maling($isatu, '<a href="', '"');
+$satu=maling($isatu, '<a href="', '">');
 header('Location: '.$satu.'');
 }
 
 if($_GET['type'] == '480p') {
-$idua=maling($ggg, '720p<', '480p');
-$dua=maling($idua, '<a href="', '"');
+$idua=maling($ggg, '720p', '480p');
+$dua=maling($idua, '<a href="', '">');
 header('Location: '.$dua.'');
 }
 
 if($_GET['type'] == '240p') {
-$itiga=maling($ggg, '480p<', '240p');
-$tiga=maling($itiga, '<a href="', '"');
+$itiga=maling($ggg, '480p', '240p');
+$tiga=maling($itiga, '<a href="', '">');
 header('Location: '.$tiga.'');
 }
 
 if($_GET['type'] == '144p') {
-$iempat=maling($ggg, '240p<', '144p');
-$empat=maling($iempat, '<a href="', '"');
+$iempat=maling($ggg, '240p', '144p');
+$empat=maling($iempat, '<a href="', '">');
 header('Location: '.$empat.'');
 }
 
 if($_GET['type'] == '360p') {
-$ilima=maling($ggg, '144p<', '360p');
-$lima=maling($ilima, '<a href="', '"');
+$ilima=maling($ggg, '144p', '360p');
+$lima=maling($ilima, '<a href="', '">');
 header('Location: '.$lima.'');
 }
 ?>
