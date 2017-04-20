@@ -20,6 +20,9 @@ $f=file('http://keepvid.com/?url=http://www.youtube.com/watch?v='.$_GET['id'].''
 $gg=@implode($f);
 $gg = preg_replace('/\s+/', ' ',$gg);
 $gg=str_replace('&title=', '&title=waphan.co+-+', $gg);
+$gg=str_replace('(Max 720p)', 'Max 720p', $gg);
+$gg=str_replace('<span class="spanWid"><img src="style/images/d_icon1.png" alt=""/> ', '', $gg);
+
 $infoo=maling($gg, '<div class="d-info2">', '<div class="more panel_button">');
 $satu=maling($infoo, 'Full Video</dt><dd><a href="', '"');
 $dua=maling($infoo, 'Full Video</dt><dd><a href="', '"');
