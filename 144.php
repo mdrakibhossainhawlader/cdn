@@ -20,10 +20,9 @@ $f=file('http://keepvid.com/?url=http://www.youtube.com/watch?v='.$_GET['id'].''
 $gg=@implode($f);
 $gg = preg_replace('/\s+/', ' ',$gg);
 $gg=str_replace('&title=', '&title=waphan.co+-+', $gg);
-$ggg=maling($gg, '<div class="d-info2">', '</dl>');
+$ggg=maling($gg, '<td class="al" width="25%">144p</td>', 'class="btn btn-outline btn-sm"');
 
-$isatu=maling($ggg, '240p</span>', '144p</span>');
-$satu=maling($isatu, '<a href="', '" >');
+$satu=maling($ggg, '<a href="', '" >');
 if(!empty($satu)){
 header('Location: '.$satu.'');}else{
 echo '<center>Sorry, there was a problem with this link<br/><a href="http://waphan.co">Back to Main</a></center>';
